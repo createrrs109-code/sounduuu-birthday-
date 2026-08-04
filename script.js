@@ -1,9 +1,5 @@
-document
-.getElementById("startBtn")
-.addEventListener("click",()=>{
+document.getElementById("startBtn").addEventListener("click", function () {
 
-    alert(
-        "Happy Birthday Sounduuu 🫶💝\n\nThis is just the beginning of your surprise ❤️"
-    );
+    alert("🎉 Welcome to Soumya's Birthday Surprise! 💖\n\nThe real surprise begins now...");
 
 });
