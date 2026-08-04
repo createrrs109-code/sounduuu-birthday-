@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Happy Birthday Soumya ❤️</title>
 
 <link rel="stylesheet" href="style.css">
@@ -10,21 +11,80 @@
 
 <body>
 
-<div class="welcome">
+<!-- Floating background -->
+<div class="floating-hearts"></div>
 
-    <h1>🎉 Happy Birthday Soumya 🎉</h1>
+<!-- Welcome Screen -->
+<section id="welcome" class="screen active">
 
-    <h2>25 September 2026</h2>
+    <div class="card">
 
-    <p>
-        Today is all about celebrating the most beautiful person. 💖
-    </p>
+        <h1>🎉 Happy Birthday Soumya 🎉</h1>
 
-    <button id="startBtn">
-        Start Surprise 🎁
-    </button>
+        <h2>25 September 2026</h2>
 
-</div>
+        <div class="anime">
+            🌸✨👧✨🌸
+        </div>
+
+        <p>
+            Today isn't just another day...
+            <br><br>
+            It's the birthday of someone truly special. 💖
+        </p>
+
+        <button id="startBtn">
+            Start Surprise 🎁
+        </button>
+
+    </div>
+
+</section>
+
+<!-- Story Screen -->
+<section id="story" class="screen">
+
+    <div class="card">
+
+        <h2>💌 A Small Message</h2>
+
+        <p>
+            Every smile of yours makes the world brighter.
+            <br><br>
+            May this birthday bring happiness, success, good health,
+            and endless beautiful memories.
+        </p>
+
+        <button id="nextBtn">
+            Continue ➜
+        </button>
+
+    </div>
+
+</section>
+
+<!-- Final Screen -->
+<section id="final" class="screen">
+
+    <canvas id="confetti"></canvas>
+
+    <div class="card">
+
+        <h1>🎂 Happy Birthday Soumya ❤️</h1>
+
+        <h2>May all your dreams come true ✨</h2>
+
+        <div class="cake">
+            🎂
+        </div>
+
+        <button onclick="location.reload()">
+            Watch Again 🔄
+        </button>
+
+    </div>
+
+</section>
 
 <script src="script.js"></script>
 
