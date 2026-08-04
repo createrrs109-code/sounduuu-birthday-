@@ -10,7 +10,10 @@ document.getElementById("startBtn").addEventListener("click", () => {
     story.classList.add("active");
 });
 
-document.getElementById("nextBtn").addEventListener("click", () => {
+document.getElementById("letterBtn").addEventListener("click", () => {
+    document.getElementById("loveLetter").style.display = "block";
+    document.getElementById("letterBtn").style.display = "none";
+});
     story.classList.remove("active");
     finalPage.classList.add("active");
     startConfetti();
