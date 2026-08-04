@@ -3,6 +3,9 @@ const story = document.getElementById("story");
 const finalPage = document.getElementById("final");
 
 document.getElementById("startBtn").addEventListener("click", () => {
+    const music = document.getElementById("bgMusic");
+    music.play();
+
     welcome.classList.remove("active");
     story.classList.add("active");
 });
