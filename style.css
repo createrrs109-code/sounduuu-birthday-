@@ -219,3 +219,32 @@ transform:scale(1);
 .anime{
     margin:20px 0;
 }
+.moon{
+    position:fixed;
+    top:40px;
+    right:40px;
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:radial-gradient(circle,#fff9c4,#ffe082,#ffd54f);
+    box-shadow:
+        0 0 20px #fff9c4,
+        0 0 40px #ffe082,
+        0 0 80px rgba(255,255,180,.8);
+    animation:moonGlow 3s ease-in-out infinite;
+    z-index:0;
+}
+
+@keyframes moonGlow{
+
+0%,100%{
+    transform:scale(1);
+    opacity:1;
+}
+
+50%{
+    transform:scale(1.08);
+    opacity:.9;
+}
+
+}
