@@ -31,7 +31,7 @@ animation:fade .8s;
 .card{
 width:90%;
 max-width:500px;
-background:rgba(255,255,255,.12);
+background:rgba(255,255,255,.95);
 backdrop-filter:blur(15px);
 padding:35px;
 border-radius:25px;
@@ -46,13 +46,14 @@ margin-bottom:15px;
 
 h2{
 margin-bottom:20px;
-color:#ffe66d;
+color:#e91e63;
 }
 
 p{
-font-size:1.1rem;
-line-height:1.7;
-margin-bottom:25px;
+    font-size:1.1rem;
+    line-height:1.7;
+    margin-bottom:25px;
+    color:#333333;
 }
 
 .anime{
