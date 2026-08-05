@@ -115,23 +115,3 @@ document.getElementById("giftBox").addEventListener("click", () => {
     }, 300);
 
 });
-.gift{
-    font-size:80px;
-    cursor:pointer;
-    display:inline-block;
-    margin:25px 0;
-    transition:0.3s;
-}
-
-.gift:hover{
-    transform:scale(1.15);
-}
-
-#giftMessage{
-    display:none;
-    font-size:22px;
-    color:#e91e63;
-    font-weight:bold;
-    line-height:1.8;
-    margin-top:20px;
-}
