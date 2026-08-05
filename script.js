@@ -13,6 +13,7 @@ document.getElementById("startBtn").addEventListener("click", () => {
 document.getElementById("letterBtn").addEventListener("click", () => {
     document.getElementById("loveLetter").style.display = "block";
     document.getElementById("letterBtn").style.display = "none";
+    typeLetter();
 });
 
 document.getElementById("nextBtn").addEventListener("click", () => {
@@ -80,4 +81,26 @@ document.getElementById("cake").addEventListener("click", () => {
     }, 300);
 
 });
-                
+const message =
+"Wishing you a birthday filled with happiness, laughter, peace, and beautiful memories.\n\nYou deserve every smile today and always. 🌸\n\nHappy Birthday once again! 🎂❤️";
+
+function typeLetter() {
+    const text = document.getElementById("letterText");
+    text.innerHTML = "";
+
+    let i = 0;
+
+    function typing() {
+        if (i < message.length) {
+            if (message[i] === "\n") {
+                text.innerHTML += "<br>";
+            } else {
+                text.innerHTML += message[i];
+            }
+            i++;
+            setTimeout(typing, 35);
+        }
+    }
+
+    typing();
+}
