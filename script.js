@@ -108,10 +108,18 @@ document.getElementById("giftBox").addEventListener("click", () => {
 
     document.getElementById("giftMessage").style.display = "block";
 
-    document.getElementById("giftBox").style.transform = "scale(1.2) rotate(10deg)";
+    document.getElementById("giftBox").innerHTML = "🎉";
+
+    document.getElementById("giftBox").style.transform = "scale(1.3) rotate(15deg)";
+
+    document.getElementById("giftBox").style.filter =
+        "drop-shadow(0 0 20px gold)";
+
+    startConfetti();
 
     setTimeout(() => {
-        document.getElementById("giftBox").style.transform = "scale(1) rotate(0deg)";
-    }, 300);
+        document.getElementById("giftBox").style.transform =
+            "scale(1) rotate(0deg)";
+    }, 400);
 
 });
