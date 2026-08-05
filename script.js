@@ -69,3 +69,10 @@ function startConfetti() {
     animate();
 
 }
+document.getElementById("cake").addEventListener("click", () => {
+    document.getElementById("wishText").style.display = "block";
+    document.getElementById("cake").style.transform = "scale(1.2)";
+    setTimeout(() => {
+        document.getElementById("cake").style.transform = "scale(1)";
+    }, 300);
+});
