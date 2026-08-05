@@ -160,3 +160,31 @@ transform:scale(1);
         transform:rotateX(0deg) scale(1);
     }
 }
+.gift{
+    font-size:90px;
+    margin:25px auto;
+    cursor:pointer;
+    transition:.3s;
+    animation:giftBounce 2s infinite;
+}
+
+#giftMessage{
+    display:none;
+    margin-top:20px;
+    color:#e91e63;
+    font-size:22px;
+    font-weight:bold;
+    line-height:1.7;
+}
+
+@keyframes giftBounce{
+
+0%,100%{
+    transform:translateY(0);
+}
+
+50%{
+    transform:translateY(-12px);
+}
+
+}
