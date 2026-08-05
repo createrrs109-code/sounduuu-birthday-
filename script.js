@@ -23,7 +23,7 @@ document.getElementById("nextBtn").addEventListener("click", () => {
 });
 
 function startConfetti() {
-
+startFireworks();
     const canvas = document.getElementById("confetti");
     const ctx = canvas.getContext("2d");
 
@@ -123,3 +123,49 @@ document.getElementById("giftBox").addEventListener("click", () => {
     }, 400);
 
 });
+function startFireworks() {
+
+    const canvas = document.getElementById("fireworks");
+    const ctx = canvas.getContext("2d");
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const fireworks = [];
+
+    for (let i = 0; i < 120; i++) {
+        fireworks.push({
+            x: canvas.width / 2,
+            y: canvas.height / 2,
+            angle: Math.random() * Math.PI * 2,
+            speed: Math.random() * 6 + 2,
+            radius: Math.random() * 3 + 2,
+            life: 100,
+            color: `hsl(${Math.random() * 360},100%,60%)`
+        });
+    }
+
+    function animateFireworks() {
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        fireworks.forEach(f => {
+
+            f.x += Math.cos(f.angle) * f.speed;
+            f.y += Math.sin(f.angle) * f.speed;
+            f.life--;
+
+            ctx.beginPath();
+            ctx.fillStyle = f.color;
+            ctx.arc(f.x, f.y, f.radius, 0, Math.PI * 2);
+            ctx.fill();
+
+        });
+
+        if (fireworks.some(f => f.life > 0)) {
+            requestAnimationFrame(animateFireworks);
+        }
+    }
+
+    animateFireworks();
+}
